@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">r  workshop shoes</string>
+    <string name="titulo">shoe sale</string>
+    <string name="genero">gender</string>
+    <string name="tipo">kind</string>
+    <string name="marca">brand</string>
+    <string name="cantidad">quantity</string>
+    <string name="total">Total to pay</string>
+</resources>
