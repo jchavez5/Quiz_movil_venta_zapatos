@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">taller_zapatos</string>
+    <string name="titulo">Venta de zapatos</string>
+    <string name="genero">Genero</string>
+    <string name="tipo">Tipo</string>
+    <string name="marca">Marca</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="total">Total a pagar</string>
+</resources>
