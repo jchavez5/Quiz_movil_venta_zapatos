@@ -11,7 +11,28 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void total_hombre_zapatilla_nike(){
+        double cantidad =2,precio=120000;
+        double  resul=metodo.total_pago(cantidad,precio);
+        assertEquals(240000,resul,0  );
     }
+    @Test
+    public void total_mujer_zapatilla_nike(){
+        double cantidad =3,precio=100000;
+        double  resul=metodo.total_pago(cantidad,precio);
+        assertEquals(300000,resul,0  );
+    }
+    @Test
+    public void total_mujer_clasico_puma(){
+        double cantidad =1,precio=120000;
+        double  resul=metodo.total_pago(cantidad,precio);
+        assertEquals(120000,resul,0  );
+    }
+    @Test
+    public void total_hombre_clasico_puma(){
+        double cantidad =10,precio=100000;
+        double  resul=metodo.total_pago(cantidad,precio);
+        assertEquals(1000000,resul,0  );
+    }
+
 }
