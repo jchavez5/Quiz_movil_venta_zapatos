@@ -45,83 +45,100 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void calculo(View v){
-        double cant, valor=0;
-        resultado.setText("");/*setear la caja*/
-        int opciones_genero,opciones_tipo,opciones_marca;
-        cant=Double.parseDouble(cantidad.getText().toString());
+        if (validar()){
+
+            double cant, valor=0;
+            resultado.setText("");/*setear la caja*/
+            int opciones_genero,opciones_tipo,opciones_marca;
+            cant=Double.parseDouble(cantidad.getText().toString());
 
 
 
-        opciones_genero  = genero_spinner.getSelectedItemPosition();
-        opciones_tipo  = tipo_spinner.getSelectedItemPosition();
-        opciones_marca=marca_spinner.getSelectedItemPosition();
+            opciones_genero  = genero_spinner.getSelectedItemPosition();
+            opciones_tipo  = tipo_spinner.getSelectedItemPosition();
+            opciones_marca=marca_spinner.getSelectedItemPosition();
 
-        switch (opciones_genero){
-            case 0:/*hombre*/
-                switch (opciones_tipo){
-                    case 0:/*zapatilla*/
-                        switch (opciones_marca){
-                            case 0:/*nike*/
-                                valor=metodo.total_pago(cant,120000    );
-                                break;
-                            case 1:/*adiddas*/
-                                valor=metodo.total_pago(cant,140000    );
-                                break;
-                            case 2:/*puma*/
-                                valor=metodo.total_pago(cant,130000    );
-                                break;
-                        }
-                        break;
-                    case 1:/*clasico*/
-                        switch (opciones_marca){
-                            case 0:/*nike*/
-                                valor=metodo.total_pago(cant,50000    );
-                                break;
-                            case 1:/*adiddas*/
-                                valor=metodo.total_pago(cant,80000  );
-                                break;
-                            case 2:/*puma*/
-                                valor=metodo.total_pago(cant,100000  );
-                                break;
-                        }
-                        break;
-                }
+            switch (opciones_genero){
+                case 0:/*hombre*/
+                    switch (opciones_tipo){
+                        case 0:/*zapatilla*/
+                            switch (opciones_marca){
+                                case 0:/*nike*/
+                                    valor=metodo.total_pago(cant,120000    );
+                                    break;
+                                case 1:/*adiddas*/
+                                    valor=metodo.total_pago(cant,140000    );
+                                    break;
+                                case 2:/*puma*/
+                                    valor=metodo.total_pago(cant,130000    );
+                                    break;
+                            }
+                            break;
+                        case 1:/*clasico*/
+                            switch (opciones_marca){
+                                case 0:/*nike*/
+                                    valor=metodo.total_pago(cant,50000    );
+                                    break;
+                                case 1:/*adiddas*/
+                                    valor=metodo.total_pago(cant,80000  );
+                                    break;
+                                case 2:/*puma*/
+                                    valor=metodo.total_pago(cant,100000  );
+                                    break;
+                            }
+                            break;
+                    }
 
-                break;
-            case 1:/*mujer*/
-                switch (opciones_tipo){
-                    case 0:/*zapatilla*/
-                        switch (opciones_marca){
-                            case 0:/*nike*/
-                                valor=metodo.total_pago(cant,110000    );
-                                break;
-                            case 1:/*adiddas*/
-                                valor=metodo.total_pago(cant,130000 );
-                                break;
-                            case 2:/*puma*/
-                                valor=metodo.total_pago(cant,110000 );
-                                break;
-                        }
-                        break;
-                    case 1:/*clasico*/
-                        switch (opciones_marca){
-                            case 0:/*nike*/
-                                valor=metodo.total_pago(cant,60000 );
-                                break;
-                            case 1:/*adiddas*/
-                                valor=metodo.total_pago(cant,70000  );
-                                break;
-                            case 2:/*puma*/
-                                valor=metodo.total_pago(cant,120000  );
-                                break;
-                        }
-                        break;
-                }
+                    break;
+                case 1:/*mujer*/
+                    switch (opciones_tipo){
+                        case 0:/*zapatilla*/
+                            switch (opciones_marca){
+                                case 0:/*nike*/
+                                    valor=metodo.total_pago(cant,110000    );
+                                    break;
+                                case 1:/*adiddas*/
+                                    valor=metodo.total_pago(cant,130000 );
+                                    break;
+                                case 2:/*puma*/
+                                    valor=metodo.total_pago(cant,110000 );
+                                    break;
+                            }
+                            break;
+                        case 1:/*clasico*/
+                            switch (opciones_marca){
+                                case 0:/*nike*/
+                                    valor=metodo.total_pago(cant,60000 );
+                                    break;
+                                case 1:/*adiddas*/
+                                    valor=metodo.total_pago(cant,70000  );
+                                    break;
+                                case 2:/*puma*/
+                                    valor=metodo.total_pago(cant,120000  );
+                                    break;
+                            }
+                            break;
+                    }
 
-                break;
+                    break;
+            }
+            resultado.setText(""+String.format("%.2f",valor));
+
         }
-        resultado.setText(""+String.format("%.2f",valor));
 
 
     }
+
+    public boolean validar(){
+        if (cantidad.getText().toString().equals("")){
+            cantidad.requestFocus();
+            cantidad.setError(recursos.getString(R.string.error));
+            return false;
+        }
+        if (){
+
+        }
+        return true;
+    }
+
 }

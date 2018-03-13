@@ -24,9 +24,9 @@ public class ExampleUnitTest {
     }
     @Test
     public void total_mujer_clasico_puma(){
-        double cantidad =1,precio=120000;
+        double cantidad =2,precio=120000;
         double  resul=metodo.total_pago(cantidad,precio);
-        assertEquals(120000,resul,0  );
+        assertEquals(240000,resul,0  );
     }
     @Test
     public void total_hombre_clasico_puma(){
