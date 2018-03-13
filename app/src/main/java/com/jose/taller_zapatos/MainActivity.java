@@ -135,7 +135,11 @@ public class MainActivity extends AppCompatActivity {
             cantidad.setError(recursos.getString(R.string.error));
             return false;
         }
-        if (){
+        int numeroMenoQueCero=Integer.parseInt(cantidad.getText().toString());
+        if (numeroMenoQueCero<0){
+            cantidad.requestFocus();
+            cantidad.setError(recursos.getString(R.string.error2));
+            return false;
 
         }
         return true;

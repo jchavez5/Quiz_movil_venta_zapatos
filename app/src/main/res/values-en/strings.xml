@@ -15,4 +15,5 @@
     <string name="adiddas">adiddas</string>
     <string name="puma">puma</string>
     <string name="error">you must enter a number</string>
+    <string name="error2">They should not be negative numbers</string>
 </resources>

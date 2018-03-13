@@ -27,4 +27,5 @@
     <string name="adiddas">Adiddas</string>
     <string name="puma">Puma</string>
     <string name="error">Debe digitar un numero</string>
+    <string name="error2">No deben ser numero negativos</string>
 </resources>
